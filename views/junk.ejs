@@ -1,0 +1,471 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <title>Pharmacy Almanac</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+    
+            body{
+              font-family: 'Roboto Condensed';
+              font-size: 15px;
+            }
+            ul.a{
+                background-color: rgb(228, 138, 138);
+                border-radius: 25px;
+                margin-top: 20px
+            }
+            li {
+                border-radius: 25px;
+                font-size: 15px;
+            }
+            li:hover{
+              background-color: azure;
+            }
+            button.a{
+                background-color: rgb(228, 138, 138);
+                color: #000000;
+                box-shadow: 3px 3px 8px 3px #333333;
+                font-size: 15px;
+            }
+            .footer{
+              font-size: 20px;
+              text-align: center;
+              box-shadow: 3px 3px 12px 5px #888888; 
+              background-color: #b5ddfa; 
+              padding: 20px;
+            }
+            .a{
+                background-color: rgb(228, 138, 138);
+                color: #000000;
+                box-shadow: 3px 3px 8px 3px #333333;
+                font-size: 15px;
+            }
+            tr{
+                background-color: #b5ddfa;
+                box-shadow: 3px 3px 8px 3px #333333;
+                font-size: 15px;
+            }
+            tr:hover{
+                background-color: #acd4f0;
+                -moz-box-shadow:    inset 0 0 3px 5px rgb(0, 0, 0, 0.15);
+                -webkit-box-shadow: inset 0 0 3px 5px rgb(0, 0, 0, 0.15);
+                box-shadow:         inset 0 0 3px 5px rgb(0, 0, 0, 0.15);
+                cursor: pointer;
+                
+            }
+            .imprint {
+              -moz-box-shadow:    inset 0 0 10px 15px rgb(0, 0, 0, 0.15);
+              -webkit-box-shadow: inset 0 0 10px 15px rgb(0, 0, 0, 0.15);
+              box-shadow:         inset 0 0 10px 15px rgb(0, 0, 0, 0.15);
+            }
+            .shadow{
+              box-shadow: 5px 10px 8px 10px #888888; 
+              border-radius: 25px;
+            }
+            #helpfulLinks{
+              box-shadow: 5px 5px 12px 8px #888888; 
+              border-radius: 25px;
+              background-color: #8cb9da; 
+              margin-left: 45px; 
+              margin-right: 30px; 
+              padding-top: 30px; 
+            }
+            #mainBody{
+              box-shadow: 5px 5px 12px 8px #888888; 
+              border-radius: 25px;
+              background-color: #81aac7; 
+              padding: 30px; 
+              margin-left: 30px
+            }
+            #space{
+              font-size: 20px;
+              color: #f1f1f1;
+            }
+            h1{
+                font-size: 60px;
+                font-family: 'Raleway';
+                font-weight: 700;
+            }
+            h2{
+                font-size: 40px;
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-style: italic;
+            }
+            h3{
+                font-size: 35px;
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-style: italic;
+            }
+            option{
+              background-color: rgb(228, 138, 138);
+              color: #000000;
+            }
+        </style>
+      </head>
+
+  <body>
+    <header class="navbar-toggler" style="background-color: #81aac7;"></header>
+    <nav style="background-color: #81aac7; color:azure; box-shadow: 5px 10px 8px 10px  rgb(63, 31, 31); border-radius: 1px;" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/toDoList">Challenge I: To Do List</a>
+                <a class="dropdown-item" href="/w07">W07 Reading</a>
+                <a class="dropdown-item" href="/w08ta">W08 Reading and Team Activity</a>
+                <a class="dropdown-item" href="/w09">W09 Reading and Team Activity</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+    <div class="row">
+        <div class="col-sm-3" style="background-color: aquamarine;"></div>
+        <div class="col-sm-8" style="background-color: green;">
+            <h1>W10 Reading and Team Activity!</h1>
+            <button><a href="/w10">Back to School List</a></button>
+        </div>
+        <div class="col-sm-2" style="background-color: aquamarine;"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3" style="background-color: aquamarine;">
+            <div class="container" style="background-color: blueviolet;">
+            </div>
+        </div>
+        <div class="col-sm-7" style="background-color: chocolate;">
+           <h2>Pharmacy School Name Here</h2>
+           <button type="button" class="btn btn-dark col-sm-12" onclick="toggleVisibility1()">School Information</button>
+           <p></p>
+           <div id="toggle1" style="display: none;">
+            <div class="container">
+                <h2 class="col-sm-6" style="background-color: lightgreen;">Information Here<br></h2> <br>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Location</h3>
+                <p>City, State</p>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Program Website</h3>
+                <p>Link to URL</p>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Public/Private School?</h3>
+                <p>Public/Private School</p>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Program Length</h3>
+                <p># Years</p>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Part of a Medical College</h3>
+                <p>Yes/No</p>
+            </div>        
+           </div>
+           <button type="button" class="btn btn-dark col-sm-12" onclick="toggleVisibility2()">Program Description</button>
+           <p></p>
+           <div id="toggle2" style="display: none;">
+            <p>
+                Pharmacy School Description Here<br>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et semper enim, eget molestie lectus. Maecenas eget nunc ex. Nullam sagittis pretium metus vel faucibus. 
+                Fusce volutpat arcu eget elit tincidunt congue. Maecenas a felis imperdiet, lobortis nisi in, bibendum metus. Pellentesque euismod elementum dui, a convallis dolor 
+                pellentesque semper. Cras tempus accumsan ipsum, eu ullamcorper nulla ornare vitae. Cras sed gravida lacus, vitae mollis nibh. Phasellus nulla nulla, consectetur quis
+                sem eget, egestas suscipit urna. Praesent nulla ligula, malesuada sit amet ipsum sed, dictum lobortis urna. Nam a erat hendrerit, mattis ante vel, vulputate leo. <br>
+
+                <br>
+                Aenean scelerisque tincidunt tellus vitae volutpat. Vestibulum ac pellentesque urna, quis gravida velit. Curabitur a vulputate enim. Cras neque est, suscipit porttitor
+                felis sit amet, cursus sodales sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur 
+                ridiculus mus. Praesent sed urna ullamcorper, dictum massa eleifend, sagittis nisi. Curabitur sollicitudin est ac ullamcorper pulvinar.
+           </p>
+           </div>
+           <button type="button" class="btn btn-dark col-sm-12" onclick="toggleVisibility3()">Course Prerequisites</button>
+           <p></p>
+           <div id="toggle3" style="display: none;">
+            <div class="container">
+                <h2 class="col-sm-6" style="background-color: lightgreen;">Requirements Here<br></h2> <br>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Degree Required</h3>
+                <p>Yes/No/Recommended</p>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Min GPA</h3>
+                <p>Score/"N/A"</p>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Required Credit Hours</h3>
+                <h4>Total Credit Hours: ## Credit Hours</h4>
+                <h4>Science Credit Hours: ## Credit Hours</h4>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">PCAT Required</h3>
+                <p>Yes/No/Recommended</p>
+
+                <h3 class="col-sm-4" style="background-color: lightslategray;">Min PCAT Score</h3>
+                <p>Score/"N/A"</p>
+            </div>        
+           </div>
+          <button type="button" class="btn btn-dark col-sm-12" onclick="toggleVisibility4()">Application Information</button>
+          <p></p>
+          <div id="toggle4" style="display: none;">
+           <div class="container">
+               <h2 class="col-sm-6" style="background-color: lightgreen;">Information Here<br></h2> <br>
+
+               <h3 class="col-sm-4" style="background-color: lightslategray;">Application Deadline</h3>
+               <p>Date</p>
+
+               <h3 class="col-sm-4" style="background-color: lightslategray;">Letters of Recommendation</h3>
+               <p># Required</p>
+               <p>Pharmacist Letter Required?</p>
+
+               <h3 class="col-sm-4" style="background-color: lightslategray;">Obversation Hours/Shadowing</h3>
+               <p># Hours Required</p>
+           </div>        
+          </div>
+        </div>
+        <div class="col-sm-2" style="background-color: grey;"></div>
+    </div>
+      
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      let utah = {
+          name: "University of Utah",
+          city: "Salt Lake City",
+          state: "UT",
+          public: "Public",
+          pcat: "Yes"
+      };
+
+      let rose = {
+          name: "Roseman University of Health Sciences",
+          city: "South Jordan",
+          state: "UT",
+          public: "Private",
+          pcat: "No"
+      }; 
+
+      let idaho = {
+          name: "University of Boise",
+          city: "Boise",
+          state: "ID",
+          public: "Public",
+          pcat: "Yes"
+      }; 
+
+      let montana = {
+          name: "University of Montana",
+          city: "Helena",
+          state: "MT",
+          public: "Public",
+          pcat: "Yes"
+      }; 
+
+      let schools = [utah, rose, idaho, montana]; 
+
+      function createTable() {
+          // Find Table
+        let table = document.getElementById("table"); 
+
+        // Create Empty Row 
+        for (i = 0; i < schools.length; i++){
+          let row = table.insertRow(); 
+          let cellName = row.insertCell(0);
+          let cellLocation = row.insertCell(1);
+          let cellPublic = row.insertCell(2); 
+          let cellPCAT = row.insertCell(3); 
+
+          cellName.innerHTML = schools[i].name;
+          cellLocation.innerHTML = `<p>${schools[i].city},<br> ${schools[i].state}</p>`;
+          cellPublic.innerHTML = schools[i].public;
+          cellPCAT.innerHTML = schools[i].pcat;
+        }
+      }
+            
+      function toggleVisibility1() {
+        var x = document.getElementById("toggle1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function toggleVisibility2() {
+        var x = document.getElementById("toggle2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function toggleVisibility3() {
+        var x = document.getElementById("toggle3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function toggleVisibility4() {
+        var x = document.getElementById("toggle4");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      createTable(); 
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><% title %></title>
+    </head>
+    <body>
+        <h1>
+            Hello World
+        </h1>
+        <h2>
+            <ul>
+                <li>
+                    Name: <% schoolResult.forEach(function(school){ %>
+                        <%= school.name %>
+                    <% })%>
+                </li>
+                <li>
+                    School ID: <% schoolResult.forEach(function(school){ %>
+                        <%= school.email %>
+                    <% })%>
+                </li>
+                <li>
+                    School Website: <% schoolResult.forEach(function(school){ %>
+                        <%= school.website %>
+                    <% })%>
+                </li>
+                <li>
+                    City: <% schoolResult.forEach(function(school){ %>
+                        <%= school.city %>
+                    <% })%>
+                </li>
+                <li>
+                    State: <% schoolResult.forEach(function(school){ %>
+                        <%= school.state %>
+                    <% })%>
+                </li>
+                <li>
+                    PCAT Required? <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.pcat %>
+                    <% })%>
+                </li>
+                <li>
+                    Min PCAT: <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.pcatMin %>
+                    <% })%>
+                </li>
+                <li>
+                    Degree Required? <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.degree %>
+                    <% })%>
+                </li>
+                <li>
+                    Min GPA: <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.gpaMin %>
+                    <% })%>
+                </li>
+                <li>
+                    Min Credit Hours Required: <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.minHours %>
+                    <% })%>
+                </li>
+                <li>
+                    Min Science Credit Hours Required: <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.minScience %>
+                    <% })%>
+                </li>
+                <li>
+                    Letters of Recommendation: <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.letters %>
+                    <% })%>
+                </li>
+                <li>
+                    Letter from Pharmacist Required? <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.pharmLetter %>
+                    <% })%>
+                </li>
+                <li>
+                    Obversation Hours: <% schoolResult.forEach(function(school){ %>
+                        <%= school.requirements.observationHours %>
+                    <% })%>
+                </li>
+                <li>
+                    Public or Private: <% schoolResult.forEach(function(school){ %>
+                        <%= school.private %>
+                    <% })%>
+                </li>
+                <li>
+                    Application Deadline: <% schoolResult.forEach(function(school){ %>
+                        <%= school.deadline %>
+                    <% })%>
+                </li>
+                <li>
+                    Length of Program: <% schoolResult.forEach(function(school){ %>
+                        <%= school.length %>
+                    <% })%> Years 
+                </li>
+                <li>
+                    Attached to Medical Center? <% schoolResult.forEach(function(school){ %>
+                        <%= school.medSchool %>
+                    <% })%>
+                </li>
+                <li>Program Description</li>
+                <% schoolResult.forEach(function(school){ %>
+                    <li><%= school.description[0] %></li>
+                    <li><%= school.description[1] %></li>
+                    <li><%= school.description[2] %></li>
+                    <li><%= school.description[3] %></li>
+                <% })%>
+            </ul>
+        </h2>
+        <script> 
+            console.log("hello");
+        </script>
+    </body>
+</html>
