@@ -33,18 +33,11 @@ router.get('/schools', (req, res) =>{
 
     Registration.find({_id: schoolQuery._id})
         .then((schoolResult) => {
-            //console.log(schoolResult);
-            //console.log(schoolResult[0].name); 
             const school = schoolResult[0];
-            // console.log(school); 
-            // console.log(school.name);
             res.render('schools', { title: "School Details", schoolResult });
         })
         .catch(() => { res.send("Sorry! Something went wrong!"); 
     });
-
-    // res.writeHead(200, {'Content-Type': 'text/html'});
-    // res.end('Feel free to add query parameters to the end of the url');
 });
 
 router.get('/search', (req, res) =>{
